@@ -1,4 +1,4 @@
-﻿namespace VibeSwipe.Application
+﻿namespace VibeSwipe.Tests
 {
     public class Class1
     {

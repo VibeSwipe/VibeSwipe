@@ -11,7 +11,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe.Application", "VibeSwipe.Application\VibeSwipe.Application.csproj", "{F71D6020-AC8F-4B03-B66F-4E09B79F6E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe.WebApplication", "VibeSwipe.WebApplication\VibeSwipe.WebApplication.csproj", "{0608A190-A632-44EC-8862-73A6DF6D32A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe", "VibeSwipe\VibeSwipe.csproj", "{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A9832437-145E-41D1-A214-446C19D92B56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe.Application.Tests", "VibeSwipe.Application.Tests\VibeSwipe.Application.Tests.csproj", "{16096EB9-44CF-4C14-B9EA-576A671D62C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibeSwipe.Tests", "VibeSwipe.Tests\VibeSwipe.Tests.csproj", "{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CB33707-1B83-4219-B273-FB785A62EF08}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +45,18 @@ Global
 		{F71D6020-AC8F-4B03-B66F-4E09B79F6E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F71D6020-AC8F-4B03-B66F-4E09B79F6E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F71D6020-AC8F-4B03-B66F-4E09B79F6E9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0608A190-A632-44EC-8862-73A6DF6D32A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0608A190-A632-44EC-8862-73A6DF6D32A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0608A190-A632-44EC-8862-73A6DF6D32A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0608A190-A632-44EC-8862-73A6DF6D32A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16096EB9-44CF-4C14-B9EA-576A671D62C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16096EB9-44CF-4C14-B9EA-576A671D62C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16096EB9-44CF-4C14-B9EA-576A671D62C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16096EB9-44CF-4C14-B9EA-576A671D62C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +65,8 @@ Global
 		{C8F18E34-3FA0-4ACD-85B2-34AD69A22CD8} = {8FD2F5ED-7023-46DD-AA01-0525BEF60398}
 		{BE5D83B3-E325-40C0-AB26-1D9C1B6A12A2} = {8FD2F5ED-7023-46DD-AA01-0525BEF60398}
 		{F71D6020-AC8F-4B03-B66F-4E09B79F6E9F} = {8FD2F5ED-7023-46DD-AA01-0525BEF60398}
-		{0608A190-A632-44EC-8862-73A6DF6D32A8} = {8FD2F5ED-7023-46DD-AA01-0525BEF60398}
+		{CF9DE336-AEA0-4EDC-AE11-69218CEA2F9C} = {8FD2F5ED-7023-46DD-AA01-0525BEF60398}
+		{16096EB9-44CF-4C14-B9EA-576A671D62C6} = {A9832437-145E-41D1-A214-446C19D92B56}
+		{6CC4DAD4-FCC5-4A9A-8D30-AA00B1E4CCD8} = {A9832437-145E-41D1-A214-446C19D92B56}
 	EndGlobalSection
 EndGlobal

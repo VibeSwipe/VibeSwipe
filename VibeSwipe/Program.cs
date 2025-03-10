@@ -1,4 +1,9 @@
-namespace VibeSwipe.WebApplication
+using Microsoft.EntityFrameworkCore;
+using VibeSwipe.Infrastructure.Persistance;
+using VibeSwipe.Application.Extensions;
+using VibeSwipe.Infrastructure.Extensions;
+
+namespace VibeSwipe
 {
     public class Program
     {
@@ -8,6 +13,8 @@ namespace VibeSwipe.WebApplication
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddApplication();
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             var app = builder.Build();
 
@@ -29,7 +36,23 @@ namespace VibeSwipe.WebApplication
             app.MapRazorPages()
                .WithStaticAssets();
 
+            SeedData.Initialize(app);
+
             app.Run();
+        }
+    }
+
+    public static class SeedData
+    {
+        public static void Initialize(WebApplication app)
+        {
+            using (var serviceScope = app.Services.CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+                // auto migration
+                context.Database.Migrate();
+            }
         }
     }
 }

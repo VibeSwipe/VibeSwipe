@@ -1,0 +1,23 @@
+services:
+  db:
+    container_name: db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password 
+      MYSQL_DATABASE: VibeSwipe 
+      MYSQL_USER: api
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306" 
+    volumes:
+      - db_data:/var/lib/mysql 
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "api", "-ppassword"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+
+  
+volumes:
+  db_data:

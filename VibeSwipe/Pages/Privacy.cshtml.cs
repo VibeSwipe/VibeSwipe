@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace VibeSwipe.WebApplication.Pages
+namespace VibeSwipe.Pages
 {
     public class PrivacyModel : PageModel
     {
