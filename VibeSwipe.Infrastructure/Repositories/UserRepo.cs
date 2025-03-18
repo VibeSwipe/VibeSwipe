@@ -19,9 +19,9 @@ namespace VibeSwipe.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<User?> GetUserByEmail(string email)
+        public async Task<User?> GetUserByEmail(string email)
         {
-            throw new NotImplementedException();
+            return await _db.Users.Where(x => x.Email == email).FirstOrDefaultAsync();
         }
 
         public async Task<List<User>> GetUsers()

@@ -4,7 +4,8 @@ namespace VibeSwipe.Domain.Contracts
 {
     public interface IAuthenticationService
     {
-        Task<AccessToken> AuthenticateUser(string email, string hashedPassword);
+        Task<AccessToken?> AuthenticateUserAsync(string email, string hashedPassword);
+        Task<AccessToken?> AuthenticateTokenAsync(Guid tokenId);
 
     }
 }
